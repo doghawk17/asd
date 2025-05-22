@@ -11,7 +11,6 @@ if ($_SESSION['is_client'] == 0) {
 }
 ?>
 
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -23,13 +22,23 @@ if ($_SESSION['is_client'] == 0) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <title>Client Dashboard | Upwork Clone</title>
+    <style>
+      .welcome-description {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: center;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+    </style>
   </head>
   <body>
     <?php include 'includes/navbar.php'; ?>
     
     <div class="welcome-card">
       <h1><i class="fas fa-briefcase mr-3"></i>Welcome, <?php echo $_SESSION['username']; ?>!</h1>
-      <p>Find talented freelancers and manage your projects efficiently. Post gigs, review proposals, and schedule interviews all in one place.</p>
+      <p class="welcome-description">Find talented freelancers and manage your projects efficiently. Post gigs, review proposals, and schedule interviews all in one place.</p>
       <div class="row">
         <div class="col text-center">
           <button class="showCreateGigForm btn btn-primary">Create New Gig!</button>
@@ -112,7 +121,6 @@ if ($_SESSION['is_client'] == 0) {
         else {
           alert("Make sure there are no empty input fields!")
         }
-
       })
     </script>
   </body>

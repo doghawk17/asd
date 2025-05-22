@@ -22,13 +22,23 @@ if ($_SESSION['is_client'] == 1) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <title>Freelancer Dashboard | Upwork Clone</title>
+    <style>
+      .welcome-description {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: center;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+    </style>
   </head>
   <body>
     <?php include 'includes/navbar.php'; ?>
     
     <div class="welcome-card">
       <h1><i class="fas fa-user-tie mr-3"></i>Welcome, <?php echo $_SESSION['username']; ?>!</h1>
-      <p>Browse available gigs and submit your proposals. Remember, you can only submit one proposal per gig, so make it count!</p>
+      <p class="welcome-description">Browse available gigs and submit your proposals. Remember, you can only submit one proposal per gig, so make it count!</p>
       <div class="row mt-5">
         <div class="col-12">
           <h2 class="mb-4"><i class="fas fa-briefcase mr-2"></i>Available Gigs</h2>
@@ -145,8 +155,6 @@ if ($_SESSION['is_client'] == 1) {
           })
         }
       })
-
-      
     </script>
   </body>
 </html>

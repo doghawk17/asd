@@ -25,12 +25,11 @@ if ($_SESSION['is_client'] == 1) {
     <style>
       .welcome-description {
         display: block;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
         text-align: center;
         width: 100%;
         padding: 0 20px;
+        margin: 0 auto;
+        max-width: 800px;
       }
     </style>
   </head>

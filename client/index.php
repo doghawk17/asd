@@ -24,12 +24,13 @@ if ($_SESSION['is_client'] == 0) {
     <title>Client Dashboard | Upwork Clone</title>
     <style>
       .welcome-description {
+        display: block;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         text-align: center;
-        max-width: 100%;
-        margin: 0 auto;
+        width: 100%;
+        padding: 0 20px;
       }
     </style>
   </head>
